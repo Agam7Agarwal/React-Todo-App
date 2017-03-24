@@ -40,7 +40,7 @@ export default class Display extends React.Component {
                             <td><span className="glyphicon glyphicon-ok "
                                       onClick={this.props.stchange.bind(this, i)}> </span></td>
 
-                            <td><span className="glyphicon glyphicon-edit" onClick={this.editt}> </span></td>
+                            {/*<td><span className="glyphicon glyphicon-edit" onClick={this.editt}> </span></td>*/}
 
                             <td><span className="glyphicon glyphicon-trash"
                                       onClick={this.props.trash.bind(this, i)}> </span></td>

@@ -17,14 +17,13 @@ class Todo extends Component {
 
 
         this.state = {
-            list: arr[index].todolist || [],
+            list: arr[index].todolist,
             showw: false,
-            userinfo: {}
+
         };
         this.getdata = this.getdata.bind(this);
         this.stchange = this.stchange.bind(this);
         this.trash = this.trash.bind(this);
-
         this.showform = this.showform.bind(this);
 
     }
@@ -35,7 +34,7 @@ class Todo extends Component {
         let obj = {
             task: task,
             date: date,
-            status: 'pending',
+            status: 'Pending',
         };
         list.push(obj);
         this.setState({list});
@@ -46,7 +45,7 @@ class Todo extends Component {
 
     stchange(i) {
         let temp = this.state.list;
-        let l = Object.assign([], temp, {[i]: (Object.assign({}, temp[i], {status: "done"}))});
+        let l = Object.assign([], temp, {[i]: (Object.assign({}, temp[i], {status: "Done"}))});
         this.setState({list: l})
     }
 
@@ -97,7 +96,6 @@ class Todo extends Component {
 
                 <Display
                     list={this.state.list}
-                    userinfo={this.state.userinfo}
                     stchange={this.stchange}
                     trash={this.trash}
                 />

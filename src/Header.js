@@ -26,6 +26,7 @@ export default class Header extends React.Component {
         }
         this.logindetails = this.logindetails.bind(this);
         this.logoutclick = this.logoutclick.bind(this);
+        this.loginerror=this.loginerror.bind(this);
     }
 
 
@@ -40,17 +41,26 @@ export default class Header extends React.Component {
                 password,
                 isUserLogIn: true,
             })
+
         }
         else {
             this.setState({
                 errorMsg: 'You have entered wrong username or password.'
             })
+
         }
+
     }
 
     logoutclick() {
         this.setState({
             isUserLogIn: false,
+        })
+    }
+
+    loginerror(){
+        this.setState({
+            errorMsg:"",
         })
     }
 
@@ -71,7 +81,7 @@ export default class Header extends React.Component {
                             </ul>
                             <ul className="nav navbar-nav navbar-right">
                                 {this.state.isUserLogIn ? <span/> :
-                                    <li><Link to="/Login"><span className="glyphicon glyphicon-log-in"> </span>
+                                    <li onClick={this.loginerror}><Link to="/Login"><span className="glyphicon glyphicon-log-in"> </span>
                                         Login</Link></li>}
 
                                 {this.state.isUserLogIn ?
@@ -84,7 +94,7 @@ export default class Header extends React.Component {
                     </nav>
 
                     <Route path="/Login" render={props => (
-                        < Login{...props} logindetails={this.logindetails} errorMsg={this.state.errorMsg}/>)}/>
+                        < Login{...props} logindetails={this.logindetails} errorMsg={this.state.errorMsg} />)}/>
                     {this.state.isUserLogIn ? <Redirect to="/Todo"/> : null }
 
                     <Route path="/Todo" render={props => (<Todo{...props} name={this.state.name}/>)}/>

@@ -12,8 +12,11 @@ export default class Home extends React.Component {
 
     render() {
         return (
+            <div>
             <div className="container">
                 <img src={image1} className="img"/>
+
+            </div>
                 <div className="marq">
                     <marquee ><b>Maintain Tasks.Keep Going</b></marquee>
                 </div>

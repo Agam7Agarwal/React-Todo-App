@@ -19,7 +19,7 @@ export default class Head extends React.Component {
 
             <div className="container-fluid cen">
 
-                <button className="btn btn-danger navbar-btn " onClick={this.props.showform}>ADD TASK</button>
+                <button className="btn btn-danger" onClick={this.props.showform}>ADD TASK</button>
                 <br/>
                 <hr/>
             </div>
