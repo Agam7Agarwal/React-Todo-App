@@ -4,25 +4,25 @@
 
 import React from 'react';
 
-export default class Head extends React.Component{
+export default class Head extends React.Component {
 
-    constructor(){
+    constructor() {
         super();
 
     }
 
 
-    render(){
+    render() {
 
-        return(
+        return (
 
 
-                <div className="container-fluid cen">
+            <div className="container-fluid cen">
 
-                    <button className="btn btn-danger navbar-btn " onClick={this.props.showform} >ADD TASK</button>
-                    <br/>
-                    <hr/>
-                </div>
+                <button className="btn btn-danger navbar-btn " onClick={this.props.showform}>ADD TASK</button>
+                <br/>
+                <hr/>
+            </div>
 
 
         );

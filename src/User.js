@@ -2,11 +2,11 @@
  * Created by agam on 23/3/17.
  */
 
-let  arr=[
+let arr = [
     {
         "id": 1,
         "name": "agam",
-        "password":"agam123",
+        "password": "agam123",
         "username": "Bret",
         "email": "Sincere@april.biz",
         "address": {
@@ -26,15 +26,17 @@ let  arr=[
             "catchPhrase": "Multi-layered client-server neural-net",
             "bs": "harness real-time e-markets"
         },
-        "todolist":{
-            "task":"",
-            "date":""
+        "todolist": [{
+            "task": "",
+            "date": ""
         },
+
+        ],
     },
     {
         "id": 2,
         "name": "raj",
-        "password":"raj123",
+        "password": "raj123",
         "username": "Antonette",
         "email": "Shanna@melissa.tv",
         "address": {
@@ -53,7 +55,14 @@ let  arr=[
             "name": "Deckow-Crist",
             "catchPhrase": "Proactive didactic contingency",
             "bs": "synergize scalable supply-chains"
-        }
+        },
+        "todolist": [{
+            "task": "",
+            "date": ""
+        },
+
+        ],
+
     },
     {
         "id": 3,

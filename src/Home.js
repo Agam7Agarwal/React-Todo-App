@@ -4,16 +4,19 @@
 import React from 'react';
 import image1 from './images/image.png'
 
-export default class Home extends React.Component{
-    constructor(){
+export default class Home extends React.Component {
+    constructor() {
         super();
 
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <div className="container">
-<img src={image1} className="img"/>
+                <img src={image1} className="img"/>
+                <div className="marq">
+                    <marquee ><b>Maintain Tasks.Keep Going</b></marquee>
+                </div>
             </div>
         );
     }
